@@ -129,6 +129,7 @@ const projects = [
 				"Next.js",
 				"Pandas",
 				"SciKit Learn",
+				"TensorFlow",
 				"Flask",
 				"GCP",
 				"Python",
