@@ -15,8 +15,7 @@ function useIsVisible(ref: React.MutableRefObject<HTMLDivElement | null>) {
 		});
 
 		// Observe the element
-		if (ref.current)
-			observer.observe(ref.current);
+		if (ref.current) observer.observe(ref.current);
 		// Disconnect the observer as soon as the element is unmounted
 		return () => {
 			observer.disconnect();
@@ -139,7 +138,7 @@ export default function AboutFragment() {
 								to draw and paint in my free time. I&apos;m also
 								a huge fan of music, and I love to play the
 								violin (in both Carnatic and Western styles) and
-								the flute. I'm also a competitive badminton
+								the flute. I&apos;m also a competitive badminton
 								player and I love playing table tennis often.
 							</p>
 						</ObservableElement>
@@ -183,9 +182,9 @@ export default function AboutFragment() {
 							My proficiency extends to native development using
 							C/C++, while I leverage JS and TS, along with
 							frameworks such as Bootstrap, JQuery, and React, for
-							frontend development. I've explored Unity for Game
-							development and delved into Machine Learning and AI,
-							utilizing both Python and Java. In terms of
+							frontend development. I&apos;ve explored Unity for
+							Game development and delved into Machine Learning
+							and AI, utilizing both Python and Java. In terms of
 							databases, I am well-versed in SQL and NoSQL,
 							including MySQL, MongoDB, and PostgreSQL.
 						</p>
@@ -200,7 +199,7 @@ export default function AboutFragment() {
 							Furthermore, my skills encompass UI/UX design and
 							prototyping using Figma, and I am adept at version
 							control and collaboration through Git and GitHub.
-							I'm fluent in working in IDE's such as Visual
+							I&apos;m fluent in working in IDE's such as Visual
 							Studio, Eclipse, STS, and VS Code.
 						</p>
 					</ObservableElement>
@@ -403,8 +402,8 @@ export default function AboutFragment() {
 					{/* Digital toolbox description */}
 					<ObservableElement>
 						<p className='py-2'>
-							The following are some of the awards I've received
-							over the years.
+							The following are some of the awards I&apos;ve
+							received over the years.
 						</p>
 						<div>
 							<Skill text='Ontario Scholar' />

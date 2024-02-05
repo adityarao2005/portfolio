@@ -111,7 +111,7 @@ export default function HomeFragment() {
 									<Text>
 										I&apos;m a cool engineer in McMaster
 										University currently pursuing my
-										Bachelor's Degree in Software
+										Bachelor&apos;s Degree in Software
 										Engineering. Click the button aside to
 										view the projects I have completed so
 										far.
