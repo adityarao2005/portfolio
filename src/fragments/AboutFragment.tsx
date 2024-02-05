@@ -199,8 +199,8 @@ export default function AboutFragment() {
 							Furthermore, my skills encompass UI/UX design and
 							prototyping using Figma, and I am adept at version
 							control and collaboration through Git and GitHub.
-							I&apos;m fluent in working in IDE's such as Visual
-							Studio, Eclipse, STS, and VS Code.
+							I&apos;m fluent in working in IDE&apos;s such as
+							Visual Studio, Eclipse, STS, and VS Code.
 						</p>
 					</ObservableElement>
 					{/* Scrolling mini animation: Java, TailwindCSS, Figma, Python, Javascript, React, ... (many more) */}
