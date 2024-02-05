@@ -106,12 +106,12 @@ export default function AboutFragment() {
 									<i className='far fa-circle fa-stack-2x'></i>
 									<i className='fas fa-user fa-stack-1x'></i>
 								</span>{" "}
-								My name is Aditya Rao. I'm currently a first
-								year B.Eng. student with the intent in majoring
-								in Software Engineering. I graduated from
-								highschool with Honors at Bur Oak Secondary
-								School in Markham, Ontario. I'm interested in
-								exploring many aspects and applications of
+								My name is Aditya Rao. I&apos;m currently a
+								first year B.Eng. student with the intent in
+								majoring in Software Engineering. I graduated
+								from highschool with Honors at Bur Oak Secondary
+								School in Markham, Ontario. I&apos;m interested
+								in exploring many aspects and applications of
 								software and engineering.
 							</p>
 						</ObservableElement>
@@ -121,10 +121,10 @@ export default function AboutFragment() {
 									<i className='far fa-circle fa-stack-2x'></i>
 									<i className='fas fa-school fa-stack-1x'></i>
 								</span>{" "}
-								I've got a great passion for math and the
-								sciences and I'm always looking to learn more
-								about the world around me. Although my mind is
-								mostly on understanding Computer Science,
+								I&apos;ve got a great passion for math and the
+								sciences and I&apos;m always looking to learn
+								more about the world around me. Although my mind
+								is mostly on understanding Computer Science,
 								Mathematics, Physics and Chemistry have always
 								had special place in my heart and mind.
 							</p>
@@ -135,12 +135,12 @@ export default function AboutFragment() {
 									<i className='far fa-circle fa-stack-2x'></i>
 									<i className='fas fa-info fa-stack-1x'></i>
 								</span>{" "}
-								I'm also a huge fan of the arts, and I love to
-								draw and paint in my free time. I'm also a huge
-								fan of music, and I love to play the violin (in
-								both Carnatic and Western styles) and the flute.
-								I'm also a competitive badminton player and I
-								love playing table tennis often.
+								I&apos;m also a huge fan of the arts, and I love
+								to draw and paint in my free time. I&apos;m also
+								a huge fan of music, and I love to play the
+								violin (in both Carnatic and Western styles) and
+								the flute. I'm also a competitive badminton
+								player and I love playing table tennis often.
 							</p>
 						</ObservableElement>
 					</div>

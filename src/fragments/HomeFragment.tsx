@@ -109,7 +109,7 @@ export default function HomeFragment() {
 							<div className='flex flex-col md:flex-row order-first pb-20 sm-exclusive:mx-4'>
 								<div className='flex-auto w-full md:w-64'>
 									<Text>
-										I'm a cool engineer in McMaster
+										I&apos;m a cool engineer in McMaster
 										University currently pursuing my
 										Bachelor's Degree in Software
 										Engineering. Click the button aside to
