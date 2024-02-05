@@ -2,63 +2,7 @@ import React, { useEffect, useState } from "react";
 import Modal from "@/components/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-
-// Project model
-class Project {
-	name: string;
-	description: string;
-	image: string;
-	link: string;
-	details: ProjectDetails;
-	constructor(
-		name: string,
-		description: string,
-		image: string,
-		link: string | null,
-		details: ProjectDetails
-	) {
-		this.name = name;
-		this.description = description;
-		this.image = image;
-		this.link = link ? link : "";
-		this.details = details;
-	}
-}
-
-// Project details model
-class ProjectDetails {
-	event: string;
-	position: string;
-	startDate: string;
-	endDate: string;
-	github: string;
-	collaborators: string[];
-	awards: string[];
-	skills: string[];
-	tools: string[];
-
-	constructor(
-		event: string,
-		position: string | null,
-		startDate: string,
-		endDate: string,
-		github: string | null,
-		collaborators: string[] | null,
-		awards: string[] | null,
-		skills: string[] | null,
-		tools: string[]
-	) {
-		this.event = event;
-		this.position = position ? position : "";
-		this.startDate = startDate;
-		this.endDate = endDate;
-		this.github = github ? github : "";
-		this.collaborators = collaborators ? collaborators : [];
-		this.awards = awards ? awards : [];
-		this.skills = skills ? skills : [];
-		this.tools = tools;
-	}
-}
+import { Project, ProjectDetails } from "@/models/models";
 
 const projects = [
 	// Auto Code framework

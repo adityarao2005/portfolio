@@ -1,29 +1,6 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
-
-class Artwork {
-	name: string;
-	image: string;
-	completionDate: string;
-	type: string;
-	description: string;
-	orientation: string;
-	constructor(
-		image: string,
-		name?: string,
-		completionDate?: string,
-		type?: string,
-		description?: string,
-		orientation = "landscape"
-	) {
-		this.name = name ? name : "";
-		this.image = image;
-		this.completionDate = completionDate ? completionDate : "";
-		this.type = type ? type : "";
-		this.description = description ? description : "";
-		this.orientation = orientation;
-	}
-}
+import { Artwork } from "@/models/models";
 
 const artworks = [
 	new Artwork(
