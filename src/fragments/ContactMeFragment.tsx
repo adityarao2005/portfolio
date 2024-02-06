@@ -88,7 +88,7 @@ export default function ContactMeFragment() {
 	};
 
 	return (
-		<div id='contact-me' className='p-10'>
+		<div id='contact-me' className='p-10 bg-emerald-50'>
 			<MessageModal
 				visible={modalVisible}
 				toggleVisibility={() => setModalVisible(!modalVisible)}

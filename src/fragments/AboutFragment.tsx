@@ -122,10 +122,11 @@ export default function AboutFragment() {
 								</span>{" "}
 								I&apos;ve got a great passion for math and the
 								sciences and I&apos;m always looking to learn
-								more about the world around me. Although my mind
-								is mostly on understanding Computer Science,
-								Mathematics, Physics and Chemistry have always
-								had special place in my heart and mind.
+								more about the world around me. Although my
+								biggest passion lies in Computer Science and
+								Mathematics, I&apos;ve found that I deeply enjoy
+								Physics and Chemistry as well and their separate
+								intricacies.
 							</p>
 						</ObservableElement>
 						<ObservableElement>
