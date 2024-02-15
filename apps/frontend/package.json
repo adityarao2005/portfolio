@@ -3,10 +3,9 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "nodemon -w controllers -w server.tsx --exec",
+		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"type-check": "tsc && node dist/server.js",
 		"lint": "next lint"
 	},
 	"dependencies": {

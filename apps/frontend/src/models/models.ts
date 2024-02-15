@@ -78,3 +78,16 @@ export class Artwork {
 		this.orientation = orientation;
 	}
 }
+
+export class Message {
+	name: string;
+	email: string;
+	message: string;
+	subject: string;
+	constructor(name: string, email: string, message: string, subject: string) {
+		this.name = name;
+		this.email = email;
+		this.message = message;
+		this.subject = subject;
+	}
+}
