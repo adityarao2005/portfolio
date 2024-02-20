@@ -74,6 +74,7 @@ export interface IMessage extends Document {
 	email: string;
 	message: string;
 	subject: string;
+	read: boolean;
 }
 
 const messageSchema = new Schema<IMessage>({
@@ -81,6 +82,7 @@ const messageSchema = new Schema<IMessage>({
 	email: { type: String, required: true },
 	message: { type: String, required: true },
 	subject: { type: String, required: true },
+	read: { type: Boolean, default: false },
 });
 
 export const Message = model<IMessage>("Message", messageSchema);

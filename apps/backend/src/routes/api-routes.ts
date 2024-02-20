@@ -12,17 +12,24 @@ export default function restRouterFactory<T extends Document>(
 
 	// GET ${contextPath}/${name}
 	router.get(path, (req, res) => {
-		res.status(200).json(datastore.findAll());
+		datastore.findAll().then((result) => {
+			res.status(200).json(result);
+		});
 	});
 
 	// GET ${contextPath}/${name}/:id
 	router.get(`${path}/:id`, (req, res) => {
-		let result = datastore.findById(req.params.id);
-		if (result) {
-			res.status(200).json(result);
-		} else {
-			res.sendStatus(404);
-		}
+		datastore
+			.findById(req.params.id)
+			.then(
+				(result) => {
+					res.status(200).json(result);
+				},
+				(id) => res.sendStatus(404)
+			)
+			.catch((id) => {
+				res.sendStatus(404);
+			});
 	});
 
 	// POST ${contextPath}/${name}
@@ -33,32 +40,40 @@ export default function restRouterFactory<T extends Document>(
 
 	// PUT ${contextPath}/${name}/:id
 	router.put(`${path}/:id`, (req, res) => {
-		const result = datastore.update(req.params.id, req.body);
-		if (result) {
-			res.status(200).json(result);
-		} else {
-			res.status(404);
-		}
+		datastore.update(req.params.id, req.body).then(
+			(result) => {
+				res.status(200).json(result);
+			},
+			(id) => res.sendStatus(404)
+		);
 	});
 
 	// PATCH ${contextPath}/${name}/:id
 	router.patch(`${path}/:id`, (req, res) => {
-		const result = datastore.updateBody(req.params.id, req.body);
-		if (result) {
-			res.status(200).json(result);
-		} else {
-			res.status(404);
-		}
+		datastore.updateBody(req.params.id, req.body).then(
+			(result) => {
+				res.status(200).json(result);
+			},
+			(id) => res.sendStatus(404)
+		);
 	});
 
 	// DELETE ${contextPath}/${name}/:id
 	router.delete(`${path}/:id`, (req, res) => {
-		const result = datastore.delete(req.params.id);
-		if (result) {
-			res.status(200).json(result);
-		} else {
-			res.sendStatus(404);
-		}
+		datastore.delete(req.params.id).then(
+			(result) => {
+				res.status(200).json(result);
+			},
+			(id) => res.sendStatus(404)
+		);
+	});
+
+	// DELETE ${contextPath}/${name}
+	router.delete(path, (req, res) => {
+		datastore.deleteAll().then(
+			(result) => res.sendStatus(200),
+			(id) => res.sendStatus(404)
+		);
 	});
 
 	// Return the router
