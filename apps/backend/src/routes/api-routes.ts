@@ -3,12 +3,10 @@ import { Document, Model } from "mongoose";
 import { IStore } from "@/models/datastore";
 
 export default function restRouterFactory<T extends Document>(
-	contextPath: String,
-	name: String,
 	datastore: IStore<T>
 ): Router {
 	const router = Router();
-	const path = `${contextPath}/${name}`;
+	const path = "/";
 
 	// GET ${contextPath}/${name}
 	router.get(path, (req, res) => {

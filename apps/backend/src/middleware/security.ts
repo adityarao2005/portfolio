@@ -15,28 +15,28 @@ function getBearerToken(req: express.Request): string | undefined {
 	return undefined;
 }
 
-export function ReadOnlyFactory(restRouter: Router) {
+export function ReadOnlyFactory(contextPath: string, restRouter: Router) {
 	const router = Router();
-	router.use((req, res, next) => {
-		if (getBearerToken(req) !== getSecureKey() || req.method !== "GET") {
+	router.use(contextPath, (req, res, next) => {
+		if (getBearerToken(req) !== getSecureKey() && req.method !== "GET") {
 			res.status(401).send("Unauthorized");
 		} else {
 			next();
 		}
 	});
-	router.use(restRouter);
+	router.use(contextPath, restRouter);
 	return router;
 }
 
-export function InsertOnlyFactory(restRouter: Router) {
+export function InsertOnlyFactory(contextPath: string, restRouter: Router) {
 	const router = Router();
-	router.use((req, res, next) => {
-		if (getBearerToken(req) !== getSecureKey() || req.method !== "POST") {
+	router.use(contextPath, (req, res, next) => {
+		if (getBearerToken(req) !== getSecureKey() && req.method !== "POST") {
 			res.status(401).send("Unauthorized");
 		} else {
 			next();
 		}
 	});
-	router.use(restRouter);
+	router.use(contextPath, restRouter);
 	return router;
 }
