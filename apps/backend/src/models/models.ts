@@ -75,6 +75,7 @@ export interface IMessage extends Document {
 	message: string;
 	subject: string;
 	read: boolean;
+	sentAt: Date;
 }
 
 const messageSchema = new Schema<IMessage>({
@@ -83,6 +84,7 @@ const messageSchema = new Schema<IMessage>({
 	message: { type: String, required: true },
 	subject: { type: String, required: true },
 	read: { type: Boolean, default: false },
+	sentAt: { type: Date, default: Date.now },
 });
 
 export const Message = model<IMessage>("Message", messageSchema);
