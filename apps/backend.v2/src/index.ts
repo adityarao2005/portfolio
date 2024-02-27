@@ -1,16 +1,47 @@
-import express, { Request, Response } from "express";
+import express, {
+	Express,
+	Request,
+	Response,
+	Application,
+	NextFunction,
+	ErrorRequestHandler,
+} from "express";
+import dotenv from "dotenv";
+import router_helper from "@/routes/api-routes";
+import { InsertOnlyFactory, ReadOnlyFactory } from "@/middleware/security";
+import { ArtworkStore, MessageStore, ProjectStore } from "@/models/datastore";
+//For env File
+dotenv.config();
+import "@/db/config";
 
-const app = express();
-const port = process.env.PORT || 8080;
+//Express
+const app: Application = express();
+const port = process.env.PORT || 8000;
 
-app.get("/", (_req: Request, res: Response) => {
-	return res.send("Express Typescript on Vercel");
+//DataStore
+
+//Body Parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.disable("x-powered-by");
+
+app.get("/", (req, res) => {
+	res.send("Express on Vercel");
 });
 
-app.get("/ping", (_req: Request, res: Response) => {
-	return res.send("pong 🏓");
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+	res.status(500).json({
+		error: err,
+		message: "Internal server error!",
+	});
+	console.error(err);
+	next();
 });
+
+app.use(ReadOnlyFactory("/api/projects", router_helper(ProjectStore)));
+app.use(ReadOnlyFactory("/api/artworks", router_helper(ArtworkStore)));
+app.use(InsertOnlyFactory("/api/messages", router_helper(MessageStore)));
 
 app.listen(port, () => {
-	return console.log(`Server is listening on ${port}`);
+	console.log(`Server is Fire at http://localhost:${port}`);
 });

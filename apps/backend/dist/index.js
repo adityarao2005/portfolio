@@ -36,4 +36,3 @@ app.use((0, security_1.InsertOnlyFactory)("/api/messages", (0, api_routes_1.defa
 app.listen(port, () => {
     console.log(`Server is Fire at http://localhost:${port}`);
 });
-//# sourceMappingURL=index.js.map
