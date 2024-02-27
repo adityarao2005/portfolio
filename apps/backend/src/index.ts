@@ -25,6 +25,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.disable("x-powered-by");
 
+app.get("/", (req, res) => {
+	res.send("Express on Vercel");
+});
+
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 	res.status(500).json({
 		error: err,
