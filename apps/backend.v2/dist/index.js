@@ -20,7 +20,7 @@ app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.disable("x-powered-by");
 app.get("/", (req, res) => {
-    res.send("Express on Vercel");
+    res.send("Express on Vercel 2");
 });
 app.use((err, req, res, next) => {
     res.status(500).json({
