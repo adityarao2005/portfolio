@@ -10,8 +10,11 @@
 		"skipLibCheck": true,
 		"noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
 		"baseUrl": ".",
+		"outDir": "dist",
 		"paths": {
 			"@/*": ["./src/*"]
 		}
-	}
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules"]
 }
