@@ -22,7 +22,7 @@ const port = process.env.PORT || 8000;
 //DataStore
 
 //Body Parser
-app.use(cors());
+app.options("*", cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.disable("x-powered-by");
