@@ -8,6 +8,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const api_routes_1 = __importDefault(require("./routes/api-routes"));
 const security_1 = require("./middleware/security");
 const datastore_1 = require("./models/datastore");
+const cors_1 = __importDefault(require("cors"));
 //For env File
 dotenv_1.default.config();
 require("./db/config");
@@ -16,6 +17,7 @@ const app = (0, express_1.default)();
 const port = process.env.PORT || 8000;
 //DataStore
 //Body Parser
+app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.disable("x-powered-by");
