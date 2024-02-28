@@ -16,16 +16,21 @@ export default function restRouterFactory<T extends Document>(
 	});
 
 	// GET ${contextPath}/${name}/:id
-	router.get(`${path}/:id`, (req, res) => {
+	router.get(`${path}:id`, (req, res) => {
+		console.log("Path received");
 		datastore
 			.findById(req.params.id)
 			.then(
 				(result) => {
 					res.status(200).json(result);
 				},
-				(id) => res.sendStatus(404)
+				(id) => {
+					console.log("Id not found: ", id);
+					res.sendStatus(404);
+				}
 			)
 			.catch((id) => {
+				console.log("Error");
 				res.sendStatus(404);
 			});
 	});
@@ -37,7 +42,7 @@ export default function restRouterFactory<T extends Document>(
 	});
 
 	// PUT ${contextPath}/${name}/:id
-	router.put(`${path}/:id`, (req, res) => {
+	router.put(`${path}:id`, (req, res) => {
 		datastore.update(req.params.id, req.body).then(
 			(result) => {
 				res.status(200).json(result);
@@ -47,7 +52,7 @@ export default function restRouterFactory<T extends Document>(
 	});
 
 	// PATCH ${contextPath}/${name}/:id
-	router.patch(`${path}/:id`, (req, res) => {
+	router.patch(`${path}:id`, (req, res) => {
 		datastore.updateBody(req.params.id, req.body).then(
 			(result) => {
 				res.status(200).json(result);
@@ -57,7 +62,7 @@ export default function restRouterFactory<T extends Document>(
 	});
 
 	// DELETE ${contextPath}/${name}/:id
-	router.delete(`${path}/:id`, (req, res) => {
+	router.delete(`${path}:id`, (req, res) => {
 		datastore.delete(req.params.id).then(
 			(result) => {
 				res.status(200).json(result);

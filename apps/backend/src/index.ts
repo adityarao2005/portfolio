@@ -29,6 +29,10 @@ app.get("/", (req, res) => {
 	res.send("Express on Vercel 2");
 });
 
+app.use(ReadOnlyFactory("/api/projects", router_helper(ProjectStore)));
+app.use(ReadOnlyFactory("/api/artworks", router_helper(ArtworkStore)));
+app.use(InsertOnlyFactory("/api/messages", router_helper(MessageStore)));
+
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 	res.status(500).json({
 		error: err,
@@ -37,10 +41,6 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 	console.error(err);
 	next();
 });
-
-app.use(ReadOnlyFactory("/api/projects", router_helper(ProjectStore)));
-app.use(ReadOnlyFactory("/api/artworks", router_helper(ArtworkStore)));
-app.use(InsertOnlyFactory("/api/messages", router_helper(MessageStore)));
 
 app.listen(port, () => {
 	console.log(`Server is Fire at http://localhost:${port}`);
