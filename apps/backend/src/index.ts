@@ -10,6 +10,7 @@ import dotenv from "dotenv";
 import router_helper from "@/routes/api-routes";
 import { InsertOnlyFactory, ReadOnlyFactory } from "@/middleware/security";
 import { ArtworkStore, MessageStore, ProjectStore } from "@/models/datastore";
+import cors from 'cors';
 //For env File
 dotenv.config();
 import "@/db/config";
@@ -21,6 +22,7 @@ const port = process.env.PORT || 8000;
 //DataStore
 
 //Body Parser
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.disable("x-powered-by");
