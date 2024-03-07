@@ -18,9 +18,14 @@ function getBearerToken(req: Request): string | undefined {
 
 export async function GET(request: Request) {
 	const { searchParams } = new URL(request.url);
-	const folder = searchParams.get("folder")!;
-	const { blobs } = await list({ prefix: folder });
-	return Response.json(blobs);
+	const folder = searchParams.get("folder");
+	if (folder) {
+		const { blobs } = await list({ prefix: folder });
+		return Response.json(blobs);
+	} else {
+        const { folders } = await list({mode: "folded"});
+        return Response.json(folders);
+    }
 }
 
 export async function POST(request: Request): Promise<NextResponse> {
