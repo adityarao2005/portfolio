@@ -20,8 +20,7 @@ export async function GET(request: Request) {
 	const { searchParams } = new URL(request.url);
 	const folder = searchParams.get("folder");
 	if (folder) {
-		const blobs = await list({ mode: "folded", prefix: folder+'/' });
-		console.log(blobs);
+		const blobs = await list({ prefix: folder });
 		return Response.json(blobs);
 	} else {
 		const { folders } = await list({ mode: "folded" });
