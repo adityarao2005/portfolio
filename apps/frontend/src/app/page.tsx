@@ -7,7 +7,7 @@ import ProjectFragment from "@/fragments/ProjectFragment";
 
 export default function Home() {
 	return (
-		<div>
+		<div className='dark:text-black'>
 			<HomeFragment />
 			<AboutFragment />
 			<ProjectFragment />

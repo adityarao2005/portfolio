@@ -11,7 +11,7 @@ function ArtCard(props: {
 	return (
 		<div
 			className={
-				"p-2 rounded bg-white m-2 hover:cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-95 duration-200 " +
+				"p-2 rounded bg-white m-2 hover:cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-95 duration-200 max-w-96 " +
 				(props.visible ? "block" : "hidden")
 			}
 			onClick={props.onClick}
@@ -116,7 +116,7 @@ export default function ArtworkFragment() {
 					Artwork
 				</h1>
 
-				<div className='p-2 mt-4 flex flex-row flex-wrap justify-center'>
+				<div className='p-2 mt-4 flex flex-wrap justify-center'>
 					{artworks.map((art, index) => (
 						<ArtCard
 							art={art}
