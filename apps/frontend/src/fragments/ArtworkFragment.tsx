@@ -1,72 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "@/components/Modal";
 import { Artwork } from "@/models/models";
-
-const artworks = [
-	new Artwork(
-		"/portrait.jpg",
-		"adsf",
-		"12/01/2024",
-		"Scenery",
-		"asdfasdf",
-		"portrait"
-	),
-	new Artwork("/landscape.jpg"),
-	new Artwork(
-		"/portrait.jpg",
-		"adsf",
-		"12/01/2024",
-		"Scenery",
-		"asdfasdf",
-		"portrait"
-	),
-	new Artwork("/landscape.jpg"),
-	new Artwork(
-		"/portrait.jpg",
-		"adsf",
-		"12/01/2024",
-		"Scenery",
-		"asdfasdf",
-		"portrait"
-	),
-	new Artwork("/landscape.jpg"),
-	new Artwork(
-		"/portrait.jpg",
-		"adsf",
-		"12/01/2024",
-		"Scenery",
-		"asdfasdf",
-		"portrait"
-	),
-	new Artwork("/landscape.jpg"),
-	new Artwork(
-		"/portrait.jpg",
-		"adsf",
-		"12/01/2024",
-		"Scenery",
-		"asdfasdf",
-		"portrait"
-	),
-	new Artwork("/landscape.jpg"),
-	new Artwork(
-		"/portrait.jpg",
-		"adsf",
-		"12/01/2024",
-		"Scenery",
-		"asdfasdf",
-		"portrait"
-	),
-	new Artwork("/landscape.jpg"),
-	new Artwork(
-		"/portrait.jpg",
-		"adsf",
-		"12/01/2024",
-		"Scenery",
-		"asdfasdf",
-		"portrait"
-	),
-	new Artwork("/landscape.jpg"),
-];
+import { getArtwork } from "@/models/datastore";
 
 function ArtCard(props: {
 	art: Artwork;
@@ -151,11 +86,16 @@ export default function ArtworkFragment() {
 	const [modalVisible, setModalVisible] = useState<boolean>(false);
 	const [selectedArt, setSelectedArt] = useState<Artwork>();
 	const [shownArt, setShownArt] = useState<number>(6);
+	const [artworks, setArtworks] = useState<Artwork[]>([]);
 
 	const toggleVisibility = (art?: Artwork) => {
 		setModalVisible(!modalVisible);
 		setSelectedArt(art);
 	};
+
+	useEffect(() => {
+		getArtwork().then((data) => setArtworks(data));
+	}, []);
 
 	return (
 		<div
