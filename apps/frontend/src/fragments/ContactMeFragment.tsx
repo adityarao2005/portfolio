@@ -90,7 +90,6 @@ export default function ContactMeFragment() {
 				subject: subject,
 				message: message,
 			})
-				.then((res) => alert(res.status))
 				.then(() => setModalVisible(true));
 		} else {
 			setModalVisible(true);

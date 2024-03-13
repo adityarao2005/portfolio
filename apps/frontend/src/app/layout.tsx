@@ -28,7 +28,10 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={inter.className + " animate-fade overflow-x-hidden"}
+				className={
+					inter.className +
+					" animate-fade overflow-x-hidden"
+				}
 			>
 				<div className='w-full asdf h-full flex flex-col' id='root'>
 					<NavComponent
