@@ -37,8 +37,13 @@ export default function restRouterFactory<T extends Document>(
 
 	// POST ${contextPath}/${name}
 	router.post(path, (req, res) => {
-		datastore.saveBody(req.body);
-		res.sendStatus(201);
+		datastore
+			.saveBody(req.body)
+			.then(() => res.sendStatus(201))
+			.catch((err) => {
+				res.sendStatus(500);
+				console.log(err);
+			});
 	});
 
 	// PUT ${contextPath}/${name}/:id

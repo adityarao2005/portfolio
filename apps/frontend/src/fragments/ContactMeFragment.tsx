@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { postMessage } from "@/models/datastore";
 
 function Icon(props: { icon: IconProp }) {
 	return (
@@ -83,8 +84,17 @@ export default function ContactMeFragment() {
 
 		if (_errors.length == 0) {
 			// TODO: send message
+			postMessage({
+				name: name,
+				email: email,
+				subject: subject,
+				message: message,
+			})
+				.then((res) => alert(res.status))
+				.then(() => setModalVisible(true));
+		} else {
+			setModalVisible(true);
 		}
-		setModalVisible(true);
 	};
 
 	return (

@@ -28,8 +28,13 @@ function restRouterFactory(datastore) {
     });
     // POST ${contextPath}/${name}
     router.post(path, (req, res) => {
-        datastore.saveBody(req.body);
-        res.sendStatus(201);
+        datastore
+            .saveBody(req.body)
+            .then(() => res.sendStatus(201))
+            .catch((err) => {
+            res.sendStatus(500);
+            console.log(err);
+        });
     });
     // PUT ${contextPath}/${name}/:id
     router.put(`${path}:id`, (req, res) => {
