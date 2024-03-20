@@ -442,7 +442,7 @@ const projects = [
 		`Active Quest is a cutting-edge fitness app developed by the brilliant minds at Bur Oak Secondary School. It not only encompasses all the essential functions of a traditional fitness app but also introduces exciting additional features. With Active Quest, the developers prioritized "fun" and "simple" as their core principles, shaping the entire app around these concepts.`,
 
 		// Image
-		"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		"https://adityarao-portfolio.vercel.app/images/misc/activequest.png",
 		// link
 		null,
 		new ProjectDetails(
