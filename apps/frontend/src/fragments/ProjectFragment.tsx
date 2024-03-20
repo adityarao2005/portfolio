@@ -147,7 +147,7 @@ const projects = [
 		// Description
 		"Being the Software Team lead for our team, I was able to help manuver and guide the team as to the workflow of the robot and how it should behave based on the commands we give it. We were able to win the Rookie All Star Award and the Rookie Inspiration Award.",
 		// Image
-		"https://adityarao-portfolio.vercel.app/misc/robotics-picture.jpg",
+		"https://adityarao-portfolio.vercel.app/images/misc/robotics-picture.jpg",
 		// link
 		null,
 		new ProjectDetails(
@@ -189,7 +189,7 @@ const projects = [
 		// Description
 		"Created an enterprise-grade calendar for my culminating in Grade 12 Computer Science course at school. Imagine it to be a mirror of Outlook with Google Classroom Integration in Java geared towards Task Management and Task Scheduling. Has features such as adding events, reading events from Google Classroom, creating sub-tasks, creating and managing reminders and alerting systems, and a Pomodoro system to ensure completion of tasks.",
 		// Image
-		"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		"https://adityarao-portfolio.vercel.app/images/misc/calendar-image.png",
 		// link
 		null,
 		new ProjectDetails(
@@ -220,7 +220,7 @@ const projects = [
 		// Description
 		"Used Ontario's OpenData dataset to provide data visualisation of the education system in Ontario. The project was created using Java to analyse the data and the JFreeChart library to visualise the data. It described the trends in the education system in Ontario and provided a way to compare schools across the province along with the relationship of wages.",
 		// Image
-		"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		"https://adityarao-portfolio.vercel.app/images/misc/big-data-image.png",
 		// link
 		null,
 		new ProjectDetails(
@@ -250,7 +250,7 @@ const projects = [
 		// Description
 		"Created a digital version of the board game Ticket To Ride with Canada as the map using Java Swing. The game is a simple game where the user has to collect as many points as possible by completing routes. The game also has a simple AI system, which leverages Graph Theory, to make the game more challenging.",
 		// Image
-		"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		"https://adityarao-portfolio.vercel.app/images/misc/ttr-image.png",
 		// link
 		null,
 		new ProjectDetails(
@@ -282,7 +282,7 @@ const projects = [
 		// Description
 		"Developed a picture puzzle game using C# and UWP. The game is a simple game where the user has to solve a picture puzzle. The game takes a picture, cuts it, scrambles it, and gets the user to try to solve it. Implemented graph theory for solving. It has multiple difficulties from easy to hard and has a timer. Made it for my brother.",
 		// Image
-		"https://adityarao-portfolio.vercel.app/misc/ninjigma-image.png",
+		"https://adityarao-portfolio.vercel.app/images/misc/ninjigma-image.png",
 		// link
 		null,
 		new ProjectDetails(
@@ -314,7 +314,7 @@ const projects = [
 		// Description
 		"Created a sample template e-commerce app for any local business to use. Has both a customer side, an employee side, and an admin side. Used Spring and Hibernate, to create the infrastructure of the project. Managed payment system via Stripe and used Gmail API to send autonomous emails. Constructed user authentication and authorization, transaction management, status of each product, and many more features.",
 		// Image
-		"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		"https://adityarao-portfolio.vercel.app/images/misc/sample-ecommerce-image.png",
 		// link
 		null,
 		new ProjectDetails(
@@ -625,10 +625,10 @@ function ProjectCard(props: {
 			}}
 			onClick={props.onClick}
 		>
-			<h1 className='text-3xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>
+			<h1 className='text-3xl font-bold bg-black'>
 				{props.project.name}
 			</h1>
-			<p className='text-lg drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>
+			<p className='text-lg bg-black w-fit'>
 				View Description
 			</p>
 			<div className='flex-1'></div>
