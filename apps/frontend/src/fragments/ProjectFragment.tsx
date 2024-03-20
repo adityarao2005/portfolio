@@ -617,7 +617,7 @@ function ProjectCard(props: {
 	return (
 		<div
 			className={
-				"h-96 flex flex-col rounded-md bg-cover bg-center bg-no-repeat p-5 text-white hover:cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-95 duration-200 drop-shadow-xl " +
+				"h-96 flex flex-col rounded-md bg-cover bg-center bg-no-repeat p-5 text-white hover:cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-95 duration-200 drop-shadow-xl border border-gray-400 " +
 				(props.visible ? "" : "hidden")
 			}
 			style={{
