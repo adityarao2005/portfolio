@@ -35,7 +35,7 @@ const projects = [
 			// Tools
 			["Eclipse", "Github"]
 		)
-	),
+	) /*
 	// Tutor.io project
 	new Project(
 		// Name
@@ -66,7 +66,7 @@ const projects = [
 			// Tools
 			["VS Code", "Github"]
 		)
-	),
+	),*/,
 	// Tutor.io project
 	new Project(
 		// Name
@@ -104,7 +104,7 @@ const projects = [
 		// Name
 		"QuakeGuard",
 		// Description
-		"QuakeGuard is a project which aims to solve the problem of earthquakes and their effects on buildings. The tool is used to predict earthquakes and their magnitudes based on geolocation services. Using this tool, authorities and visitors can understand the risks of earthquakes in the area and be cautious with respect to it.",
+		" QuakeGuard is a project which aims to solve the problem of earthquakes and their effects on buildings. The tool is used to predict earthquakes and their magnitudes based on geolocation services.",
 		// Image
 		"https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/720/310/datas/gallery.jpg",
 		// link
@@ -135,6 +135,49 @@ const projects = [
 				"Python",
 				"TailwindCSS",
 			],
+			// Tools
+			["VS Code", "Github"]
+		)
+	),
+
+	// QuakeGuard
+	new Project(
+		// Name
+		"FRC 2023: Team 9113 - Bulldog Robotics",
+		// Description
+		"Being the Software Team lead for our team, I was able to help manuver and guide the team as to the workflow of the robot and how it should behave based on the commands we give it. We were able to win the Rookie All Star Award and the Rookie Inspiration Award.",
+		// Image
+		"https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/720/310/datas/gallery.jpg",
+		// link
+		null,
+		new ProjectDetails(
+			// Event
+			"Bur Oak Secondary School Robotics Team",
+			// Position
+			"Software Team Lead",
+			// Start date
+			"Jan 2023",
+			// End date
+			"May 2023",
+			// Github
+			"https://github.com/adityarao2005/BOSS-Robotics-2023-Code",
+			// Collaborators
+			[
+				"Kirrithan Sathananthan",
+				"Deekshu Kannan",
+				"Happy Zhou",
+				"Sai Sujay Anamangandla",
+				"Kamakshi Sarvanthan",
+				"Shamanthi Rajgopal",
+				"Christina",
+				"Neiv Shah",
+				"Sean Chen",
+				"Samiksha Shetty",
+			],
+			// Awards
+			["Rookie All Star Award", "Rookie Inspiration Award"],
+			// Skills
+			["Java", "WPLib", "Command Based Programming", "Embedded Systems"],
 			// Tools
 			["VS Code", "Github"]
 		)
@@ -628,7 +671,7 @@ export default function ProjectFragment() {
 
 	return (
 		<div
-			id='projects'
+			id='experience'
 			className='w-screen h-fit flex-1 bg-emerald-50 p-10 relative'
 		>
 			<ProjectViewModel
@@ -642,7 +685,7 @@ export default function ProjectFragment() {
 						"text-center mx-auto text-black text-3xl md:text-6xl font-semibold font-['Poppins']"
 					}
 				>
-					Projects
+					Experience
 				</h1>
 			</div>
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>

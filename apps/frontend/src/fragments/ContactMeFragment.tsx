@@ -97,7 +97,7 @@ export default function ContactMeFragment() {
 	};
 
 	return (
-		<div id='contact-me' className='p-10 bg-emerald-50'>
+		<div id='contact-me' className='md:p-10 p-5 bg-emerald-50'>
 			<MessageModal
 				visible={modalVisible}
 				toggleVisibility={() => setModalVisible(!modalVisible)}
@@ -136,11 +136,11 @@ export default function ContactMeFragment() {
 				<div className='flex-1'></div>
 			</div>
 
-			<div className='flex flex-col gap-4 mx-20 my-10 ring rounded-xl p-4'>
+			<div className='flex flex-col gap-4 md:mx-20 my-10 ring rounded-xl p-4'>
 				<h1 className='text-4xl font-bold text-center text-black'>
 					Or Send Me A Message
 				</h1>
-				<div className='flex flex-row'>
+				<div className='md:flex md:flex-row'>
 					<div className='flex-1 flex flex-row'>
 						<input
 							type='text'
