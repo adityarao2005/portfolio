@@ -157,16 +157,13 @@ export default function HomeFragment() {
 							<div className='md:pb-20 pb-5 flex md:flex-row-reverse'>
 								<div className='pt-2 md:pr-20 sm-exclusive:w-full'>
 									{/* TODO: Add resume here */}
-									<button
+									<a
 										className='bg-black rounded-lg text-center text-white md:text-5xl w-full md:w-80 md:py-10 py-4 px-4 hover:bg-slate-700 active:bg-slate-900'
-										onClick={() =>
-											alert(
-												"This functionality isn't available yet. Sorry"
-											)
-										}
+										href="https://adityarao-portfolio.vercel.app/Aditya_s_Resume.pdf"
+										target="_blank"
 									>
 										Download Resume
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>
