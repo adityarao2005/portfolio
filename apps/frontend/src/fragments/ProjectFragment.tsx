@@ -453,7 +453,7 @@ const projects = [
 			// Start date
 			"May 2023",
 			// End date
-			"Present",
+			"Archived",
 			// Github
 			"https://github.com/Innovoak/ActiveQuest",
 			// Collaborators
@@ -628,14 +628,15 @@ function ProjectCard(props: {
 			<h1 className='text-3xl font-bold bg-black'>
 				{props.project.name}
 			</h1>
-			<p className='text-lg bg-black w-fit'>
-				View Description
-			</p>
+			<p className='text-lg bg-black w-fit'>View Description</p>
 			<div className='flex-1'></div>
 			<div>
-				{props.project.details.endDate == "Present" ? (
+				{props.project.details.endDate == "Present" ||
+				props.project.details.endDate == "Archived" ? (
 					<div className='rounded-full bg-red-500 p-1 w-fit'>
-						In Progress
+						{props.project.details.endDate == "Present"
+							? "In Progress"
+							: "Archived"}
 					</div>
 				) : (
 					<div className='rounded-full bg-green-600 p-1 w-fit'>
