@@ -26,9 +26,9 @@ export default function Modal(
 		>
 			<div className='flex flex-row'>
 				{/*TODO: Consider shrinking the basises to 1/6, 2/3, 1/6 respectively for a smaller screen size */}
-				<div className='basis-1/4' />
-				<div className='basis-1/2 flex flex-col'>
-					<div className='flex-1 flex flex-col my-10 bg-white rounded-2xl'>
+				<div className='basis-1/6' />
+				<div className='basis-2/3 flex flex-col'>
+					<div className='flex-1 flex flex-col max-h-screen mt-5 mb-10 rounded-t-2xl'>
 						{/* Header */}
 						{(props.backgroundColor || props.backgroundImage) && (
 							<div
@@ -39,19 +39,21 @@ export default function Modal(
 								}}
 							></div>
 						)}
-						<div className='flex-1 p-5'>{props.children}</div>
+						<div className='flex-1 p-5 overflow-y-scroll bg-gray-100'>
+							{props.children}
+						</div>
 						{/* Footer */}
-						<div className='p-5 flex flex-row-reverse'>
+						<div className='p-5 flex flex-row-reverse bg-white'>
 							<button
 								onClick={props.toggleVisibility}
-								className='bg-blue-600 text-white font-bold py-2 px-4 rounded-xl '
+								className='bg-blue-600 text-white font-bold mb-2 py-2 px-4 rounded-xl '
 							>
 								Close
 							</button>
 						</div>
 					</div>
 				</div>
-				<div className='basis-1/4' />
+				<div className='basis-1/6' />
 			</div>
 		</div>
 	);

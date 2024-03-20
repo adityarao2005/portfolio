@@ -556,7 +556,7 @@ function ProjectViewModel(props: {
 								</p>
 							)}
 						</div>
-						{props.project.link && (
+						{props.project.link ? (
 							<div className='flex-1 flex flex-col'>
 								<h1 className='text-2xl font-bold'>
 									View Demo
@@ -598,6 +598,10 @@ function ProjectViewModel(props: {
 										</object>
 									</div>
 								</a>
+							</div>
+						) : (
+							<div className='flex-1 flex flex-col'>
+								<img src={props.project.image}></img>
 							</div>
 						)}
 					</div>
