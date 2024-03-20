@@ -346,7 +346,7 @@ const projects = [
 		// Description
 		"Created a simple cross-platform game engine using C++ and created a demo game along with it to showcase how to use the engine. Inspired by Unity, I wanted to create something lightweight and fast while encompassing the power that unity has.",
 		// Image
-		"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		"https://adityarao-portfolio.vercel.app/images/misc/sharpshooter.png",
 		// link
 		null,
 		new ProjectDetails(
@@ -409,7 +409,7 @@ const projects = [
 		// Description
 		"Developed a sharpshooter game using C# and WinForms. The game is a simple game where the user has to shoot the target as many times as possible in 30 seconds. The game has a leaderboard and a login system to keep track of the user's scores. The game also has a simple AI system to make the game more challenging.",
 		// Image
-		"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		"https://adityarao-portfolio.vercel.app/images/misc/sharpshooter.png",
 		// link
 		null,
 		new ProjectDetails(
