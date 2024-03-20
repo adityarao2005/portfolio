@@ -47,7 +47,7 @@ function ArtworkViewModel(props: {
 			{props.artwork && (
 				<div
 					className={
-						"flex h-full " +
+						"flex h-full flex-col md:" +
 						(props.artwork.orientation == "landscape"
 							? "flex-col"
 							: "flex-row")

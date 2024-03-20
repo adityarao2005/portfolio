@@ -492,7 +492,7 @@ function ProjectViewModel(props: {
 				<div>
 					<h1 className='text-3xl font-bold'>{props.project.name}</h1>
 					<p className='text-lg'>{props.project.description}</p>
-					<div className='mt-5 flex flex-row'>
+					<div className='mt-5 flex md:flex-row flex-col'>
 						<div className='flex-1'>
 							<h1 className='text-2xl font-bold'>Details</h1>
 							{props.project.details.event && (
@@ -557,7 +557,7 @@ function ProjectViewModel(props: {
 							)}
 						</div>
 						{props.project.link ? (
-							<div className='flex-1 flex flex-col'>
+							<div className='md:flex-1 flex flex-col'>
 								<h1 className='text-2xl font-bold'>
 									View Demo
 								</h1>
@@ -565,7 +565,7 @@ function ProjectViewModel(props: {
 								<a
 									href={props.project.link}
 									target='_blank'
-									className='flex-1'
+									className='flex-1 m-2'
 								>
 									<div className='h-full relative border border-black hover:cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-200'>
 										<div className='flex absolute inset-0 z-30'>
@@ -589,7 +589,7 @@ function ProjectViewModel(props: {
 										<object
 											data={props.project.link}
 											type='text/html'
-											className='w-full h-full absolute inset-0 z-10 blur-[1px]'
+											className='w-full h-full min-h-40 absolute inset-0 z-10 blur-[1px]'
 										>
 											<img
 												src={props.project.image}

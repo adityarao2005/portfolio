@@ -26,9 +26,9 @@ export default function Modal(
 		>
 			<div className='flex flex-row'>
 				{/*TODO: Consider shrinking the basises to 1/6, 2/3, 1/6 respectively for a smaller screen size */}
-				<div className='basis-1/6' />
-				<div className='basis-2/3 flex flex-col'>
-					<div className='flex-1 flex flex-col max-h-screen mt-5 mb-10 rounded-t-2xl'>
+				<div className='hidden md:block md:basis-1/6' />
+				<div className='flex-1 md:basis-2/3 flex flex-col'>
+					<div className='flex-1 flex flex-col h-screen max-h-screen mt-5 mb-10 rounded-t-2xl'>
 						{/* Header */}
 						{(props.backgroundColor || props.backgroundImage) && (
 							<div
@@ -53,7 +53,7 @@ export default function Modal(
 						</div>
 					</div>
 				</div>
-				<div className='basis-1/6' />
+				<div className='hidden md:block md:basis-1/6' />
 			</div>
 		</div>
 	);
