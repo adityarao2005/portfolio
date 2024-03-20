@@ -70,11 +70,11 @@ const projects = [
 	// Tutor.io project
 	new Project(
 		// Name
-		"WebForCPP",
+		"WebCraft",
 		// Description
 		"This project is aimed at bringing C++ back into prominence by allowing for it to be used in web development. The project is a web framework which allows for C++ to be used in web development. It is currently in the early stages of development and is being built as a hobby to showcase my skills in C++ and web development.",
 		// Image
-		"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+		"https://adityarao-portfolio.vercel.app/images/misc/webcraft.svg",
 		// link
 		null,
 		new ProjectDetails(
@@ -377,7 +377,7 @@ const projects = [
 		// Description
 		"Developed a 3D side scrolling game using C# and Unity 3D, where the user has to dodge obstacles and collect coins to get the highest score possible. The game has a leaderboard and a login system to keep track of the user's scores.",
 		// Image
-		"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		"https://adityarao-portfolio.vercel.app/images/misc/endlessrunner.png",
 		// link
 		null,
 		new ProjectDetails(
@@ -617,7 +617,7 @@ function ProjectCard(props: {
 	return (
 		<div
 			className={
-				"h-96 flex flex-col rounded-md bg-cover bg-center bg-no-repeat p-5 text-white hover:cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-95 duration-200 " +
+				"h-96 flex flex-col rounded-md bg-cover bg-center bg-no-repeat p-5 text-white hover:cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-95 duration-200 drop-shadow-xl " +
 				(props.visible ? "" : "hidden")
 			}
 			style={{
