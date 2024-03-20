@@ -147,7 +147,7 @@ const projects = [
 		// Description
 		"Being the Software Team lead for our team, I was able to help manuver and guide the team as to the workflow of the robot and how it should behave based on the commands we give it. We were able to win the Rookie All Star Award and the Rookie Inspiration Award.",
 		// Image
-		"https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/720/310/datas/gallery.jpg",
+		"https://adityarao-portfolio.vercel.app/misc/robotics-picture.jpg",
 		// link
 		null,
 		new ProjectDetails(
@@ -282,7 +282,7 @@ const projects = [
 		// Description
 		"Developed a picture puzzle game using C# and UWP. The game is a simple game where the user has to solve a picture puzzle. The game takes a picture, cuts it, scrambles it, and gets the user to try to solve it. Implemented graph theory for solving. It has multiple difficulties from easy to hard and has a timer. Made it for my brother.",
 		// Image
-		"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		"https://adityarao-portfolio.vercel.app/misc/ninjigma-image.png",
 		// link
 		null,
 		new ProjectDetails(
