@@ -149,22 +149,20 @@ export default function HomeFragment() {
 									button below to view my art portfolio.
 								</Text>
 
-								<a href='#artwork'>
+								<a href='#artwork' className='flex'>
 									<Button>View Art Portfolio</Button>
 								</a>
 							</div>
 							<div className='md:flex-1'></div>
-							<div className='md:pb-20 pb-5 flex md:flex-row-reverse'>
-								<div className='pt-2 md:pr-20 sm-exclusive:w-full'>
-									{/* TODO: Add resume here */}
-									<a
-										className='bg-black rounded-lg text-center text-white md:text-5xl w-full md:w-80 md:py-10 py-4 px-4 hover:bg-slate-700 active:bg-slate-900'
-										href="https://adityarao-portfolio.vercel.app/Aditya_s_Resume.pdf"
-										target="_blank"
-									>
-										Download Resume
-									</a>
-								</div>
+							<div className='md:pb-20 my-5 flex md:flex-row'>
+								{/* TODO: Add resume here */}
+								<a
+									className='bg-black rounded-lg text-center text-white md:text-3xl flex-1 py-2 md:py-5 hover:bg-slate-700 active:bg-slate-900'
+									href='https://adityarao-portfolio.vercel.app/Aditya_s_Resume.pdf'
+									target='_blank'
+								>
+									Download Resume
+								</a>
 							</div>
 						</div>
 					</div>
