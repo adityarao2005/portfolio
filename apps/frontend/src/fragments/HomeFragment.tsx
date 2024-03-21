@@ -84,7 +84,7 @@ export default function HomeFragment() {
 						<div className='flex-1 flex flex-col-reverse'>
 							<div className='hidden md:block md:p-10'></div>
 							<div>
-								<a href='#projects'>
+								<a href='#experience'>
 									<div className='bg-black font-semibold md:m-5 py-6 align-middle sm-exclusive:w-full rounded-lg text-center text-white px-4 pr-4 hover:bg-slate-700 active:bg-slate-900'>
 										View Projects
 									</div>
