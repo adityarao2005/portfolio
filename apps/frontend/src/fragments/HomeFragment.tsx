@@ -85,7 +85,7 @@ export default function HomeFragment() {
 							<div className='hidden md:block md:p-10'></div>
 							<div>
 								<a href='#experience'>
-									<div className='bg-black font-semibold md:m-5 py-6 align-middle sm-exclusive:w-full rounded-lg text-center text-white px-4 pr-4 hover:bg-slate-700 active:bg-slate-900'>
+									<div className='bg-gray-900 font-semibold md:m-5 py-6 align-middle sm-exclusive:w-full rounded-lg text-center text-white px-4 pr-4 hover:bg-slate-700 active:bg-slate-900'>
 										View Projects
 									</div>
 								</a>
@@ -157,7 +157,7 @@ export default function HomeFragment() {
 							<div className='md:pb-20 my-5 flex md:flex-row'>
 								{/* TODO: Add resume here */}
 								<a
-									className='bg-black rounded-lg text-center text-white md:text-3xl flex-1 py-2 md:py-5 hover:bg-slate-700 active:bg-slate-900'
+									className='bg-gray-900 rounded-lg text-center text-white md:text-3xl flex-1 py-2 md:py-5 hover:bg-slate-700 active:bg-slate-900'
 									href='https://adityarao-portfolio.vercel.app/Aditya_s_Resume.pdf'
 									target='_blank'
 								>
