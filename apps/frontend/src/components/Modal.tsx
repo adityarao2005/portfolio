@@ -27,7 +27,7 @@ export default function Modal(
 			<div className='flex flex-row'>
 				<div className='hidden md:block md:basis-1/6' />
 				<div className='flex-1 md:basis-2/3 flex flex-col'>
-					<div className='flex-1 flex flex-col h-[calc(100dvh)] max-h-[calc(100dvh)] mt-5 mb-10 rounded-t-2xl'>
+					<div className='absolute inset-0 md:static md:max-h-screen flex flex-col rounded-t-2xl'>
 						{/* Header */}
 						{(props.backgroundColor || props.backgroundImage) && (
 							<div
@@ -45,7 +45,7 @@ export default function Modal(
 						<div className='p-5 flex flex-row-reverse bg-white'>
 							<button
 								onClick={props.toggleVisibility}
-								className='bg-blue-600 text-white font-bold mb-2 py-2 px-4 rounded-xl '
+								className='bg-blue-600 text-white font-bold py-2 px-4 rounded-xl '
 							>
 								Close
 							</button>
