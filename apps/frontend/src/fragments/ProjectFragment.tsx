@@ -7,6 +7,23 @@ import { Project, ProjectDetails } from "@/models/models";
 const projects = [
 	// Auto Code framework
 	new Project(
+		"Resume Builder",
+		"Realtime AI-powered resume builder which allows you to create, edit, manage, and score your resumes. Aimed to tackle the issue of having to constantly create new resumes for jobs and seeing if they are good enough for the role.",
+		"about:blank",
+		null,
+		new ProjectDetails(
+			"Side Project",
+			null,
+			"August 2023",
+			"Present",
+			null,
+			null,
+			null,
+			["Next.js", "TailwindCSS", "DaisyUI", "HeadlessUI", "Spring Boot", "MongoDB", "STOMP", "FastAPI", "Gemini", "LangChain", "TensorFlow", "SciKit Learn"],
+			["VS Code", "Github"]
+		)
+	),
+	new Project(
 		// Name
 		"AutoCode Framework",
 		// Description
@@ -636,7 +653,7 @@ function ProjectCard(props: {
 			<div className='flex-1'></div>
 			<div>
 				{props.project.details.endDate == "Present" ||
-				props.project.details.endDate == "Archived" ? (
+					props.project.details.endDate == "Archived" ? (
 					<div className='rounded-full bg-red-500 p-1 w-fit'>
 						{props.project.details.endDate == "Present"
 							? "In Progress"
