@@ -120,7 +120,7 @@ export default function HomeFragment() {
 							</div>
 							<div className='flex-1'></div>
 						</div>
-/*
+						{/*
 						<div className='md:max-h-screen md:flex-1 md:flex hidden'>
 							<div className='flex-1'></div>
 							<img
@@ -130,7 +130,7 @@ export default function HomeFragment() {
 							/>
 							<div className='flex-1'></div>
 						</div>
-						*/
+						*/}
 						{/*
 								This is the column for art stuff
 							*/}
