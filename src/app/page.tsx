@@ -12,7 +12,8 @@ import ResumeSection from "@/components/sections/ResumeSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
 
-// Static generation: resume YAML is fetched at build time
+export const revalidate = 3600 // invalidate every hour
+
 export default async function Home() {
   const data = await fetchResumeData();
   const artImages = getArtImages();
