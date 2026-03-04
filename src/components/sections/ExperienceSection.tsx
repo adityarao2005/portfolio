@@ -1,4 +1,5 @@
 import type { Experience } from "@/lib/types";
+import { sanitizeHref } from "@/lib/sanitize-url";
 import SectionWrapper from "@/components/SectionWrapper";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { FiExternalLink } from "react-icons/fi";
@@ -57,7 +58,7 @@ export default function ExperienceSection({ experiences }: ExperienceSectionProp
                                                         {exp.company}
                                                         {exp.links?.link && (
                                                             <a
-                                                                href={exp.links.link}
+                                                                href={sanitizeHref(exp.links.link)}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                                 className="inline-flex ml-2 text-muted hover:text-accent"

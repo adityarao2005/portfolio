@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { ResumeData } from "@/lib/types";
+import { sanitizeHref } from "@/lib/sanitize-url";
 import { FiGithub, FiLinkedin, FiMail, FiChevronDown } from "react-icons/fi";
 
 interface HeroProps {
@@ -63,7 +64,7 @@ export default function Hero({ data }: HeroProps) {
                     className="flex items-center justify-center gap-5 mb-12"
                 >
                     <a
-                        href={`https://github.com/${data.github}`}
+                        href={sanitizeHref(`https://github.com/${data.github}`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-3 rounded-xl bg-surface hover:bg-surface-hover border border-border text-muted hover:text-accent transition-all duration-200 hover:-translate-y-0.5"
@@ -72,7 +73,7 @@ export default function Hero({ data }: HeroProps) {
                         <FiGithub size={22} />
                     </a>
                     <a
-                        href={`https://linkedin.com/${data.linkedin}`}
+                        href={sanitizeHref(`https://linkedin.com/${data.linkedin}`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-3 rounded-xl bg-surface hover:bg-surface-hover border border-border text-muted hover:text-accent transition-all duration-200 hover:-translate-y-0.5"
@@ -81,7 +82,7 @@ export default function Hero({ data }: HeroProps) {
                         <FiLinkedin size={22} />
                     </a>
                     <a
-                        href={`mailto:${data.email}`}
+                        href={sanitizeHref(`mailto:${data.email}`)}
                         className="p-3 rounded-xl bg-surface hover:bg-surface-hover border border-border text-muted hover:text-accent transition-all duration-200 hover:-translate-y-0.5"
                         aria-label="Email"
                     >
@@ -96,13 +97,13 @@ export default function Hero({ data }: HeroProps) {
                     className="flex gap-4 justify-center"
                 >
                     <a
-                        href="#experience"
+                        href={sanitizeHref("#experience")}
                         className="px-6 py-3 bg-accent hover:bg-accent-hover text-white font-medium rounded-xl transition-all duration-200 hover:-translate-y-0.5"
                     >
                         View My Work
                     </a>
                     <a
-                        href="#contact"
+                        href={sanitizeHref("#contact")}
                         className="px-6 py-3 bg-surface hover:bg-surface-hover border border-border text-foreground font-medium rounded-xl transition-all duration-200 hover:-translate-y-0.5"
                     >
                         Get In Touch

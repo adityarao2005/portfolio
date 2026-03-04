@@ -12,9 +12,7 @@ import ResumeSection from "@/components/sections/ResumeSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
 
-// Force dynamic rendering — fetches fresh data on every request
-export const dynamic = "force-dynamic";
-
+// Static generation: resume YAML is fetched at build time
 export default async function Home() {
   const data = await fetchResumeData();
   const artImages = getArtImages();

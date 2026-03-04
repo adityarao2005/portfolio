@@ -1,4 +1,5 @@
 import type { Project } from "@/lib/types";
+import { sanitizeHref } from "@/lib/sanitize-url";
 import SectionWrapper from "@/components/SectionWrapper";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
@@ -39,7 +40,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                                 <div className="flex items-center gap-3">
                                     {project.links?.github && (
                                         <a
-                                            href={project.links.github}
+                                            href={sanitizeHref(project.links.github)}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-muted hover:text-accent transition-colors"
@@ -50,7 +51,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                                     )}
                                     {project.links?.website && (
                                         <a
-                                            href={project.links.website}
+                                            href={sanitizeHref(project.links.website)}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-muted hover:text-accent transition-colors"
