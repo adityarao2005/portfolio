@@ -1,4 +1,5 @@
 import type { ResumeData } from "@/lib/types";
+import { sanitizeHref } from "@/lib/sanitize-url";
 import SectionWrapper from "@/components/SectionWrapper";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import {
@@ -18,31 +19,31 @@ const CONTACT_ITEMS = (data: ResumeData) => [
         icon: FiMail,
         label: "Email",
         value: data.email,
-        href: `mailto:${data.email}`,
+        href: sanitizeHref(`mailto:${data.email}`),
     },
     {
         icon: FiPhone,
         label: "Phone",
         value: data.phone,
-        href: `tel:${data.phone}`,
+        href: sanitizeHref(`tel:${data.phone}`),
     },
     {
         icon: FiGithub,
         label: "GitHub",
         value: data.github,
-        href: `https://github.com/${data.github}`,
+        href: sanitizeHref(`https://github.com/${data.github}`),
     },
     {
         icon: FiLinkedin,
         label: "LinkedIn",
         value: data.linkedin,
-        href: `https://linkedin.com/${data.linkedin}`,
+        href: sanitizeHref(`https://linkedin.com/${data.linkedin}`),
     },
     {
         icon: FiGlobe,
         label: "Website",
         value: data.website,
-        href: `https://${data.website}`,
+        href: sanitizeHref(`https://${data.website}`),
     },
 ];
 
@@ -82,7 +83,7 @@ export default function ContactSection({ data }: ContactSectionProps) {
                 <AnimateOnScroll delay={0.4}>
                     <div className="mt-16 text-center">
                         <a
-                            href={`mailto:${data.email}`}
+                            href={sanitizeHref(`mailto:${data.email}`)}
                             className="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent-hover text-white font-medium rounded-xl text-lg transition-all duration-200 hover:-translate-y-0.5"
                         >
                             <FiMail size={20} />

@@ -5,7 +5,7 @@ const RESUME_YAML_URL =
     "https://raw.githubusercontent.com/adityarao2005/resume-ci-automation/refs/heads/main/data/resume.yaml";
 
 export async function fetchResumeData(): Promise<ResumeData> {
-    const res = await fetch(RESUME_YAML_URL, { cache: "no-store" });
+    const res = await fetch(RESUME_YAML_URL, { next: { revalidate: 3600 } });
     if (!res.ok) {
         throw new Error(`Failed to fetch resume data: ${res.statusText}`);
     }
