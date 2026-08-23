@@ -11,7 +11,7 @@ import {
 
 interface SkillsSectionProps {
     skills: Skills;
-    certifications: Certification[];
+    certifications?: Certification[];
 }
 
 const SKILL_CATEGORIES = [
@@ -79,7 +79,7 @@ export default function SkillsSection({
             )}
 
             {/* Certifications */}
-            {certifications.length > 0 && (
+            {certifications && certifications.length > 0 && (
                 <AnimateOnScroll>
                     <div>
                         <h3 className="text-xl font-bold text-foreground text-center mb-6 flex items-center justify-center gap-2">

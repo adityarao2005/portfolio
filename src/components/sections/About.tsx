@@ -83,10 +83,12 @@ export default function About({ data }: AboutProps) {
                                 <p className="text-2xl font-bold text-accent">{data.projects.length}+</p>
                                 <p className="text-xs text-muted mt-1">Projects</p>
                             </div>
-                            <div className="text-center p-4 rounded-xl bg-surface border border-border">
-                                <p className="text-2xl font-bold text-accent">{data.certifications.length}</p>
-                                <p className="text-xs text-muted mt-1">Certifications</p>
-                            </div>
+                            {data.certifications &&
+                                <div className="text-center p-4 rounded-xl bg-surface border border-border">
+                                    <p className="text-2xl font-bold text-accent">{data.certifications.length}</p>
+                                    <p className="text-xs text-muted mt-1">Certifications</p>
+                                </div>
+                            }
                             <div className="text-center p-4 rounded-xl bg-surface border border-border">
                                 <p className="text-2xl font-bold text-accent">
                                     {data.skills.languages.length + data.skills.frameworks.length}+

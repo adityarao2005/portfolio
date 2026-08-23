@@ -64,5 +64,5 @@ export interface ResumeData {
     projects: Project[];
     extra_curriculars: ExtraCurricular[];
     skills: Skills;
-    certifications: Certification[];
+    certifications?: Certification[];
 }

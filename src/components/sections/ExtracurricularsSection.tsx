@@ -13,7 +13,7 @@ export default function ExtracurricularsSection({
     return (
         <SectionWrapper
             id="extracurriculars"
-            title="Extracurriculars"
+            title="Leadership"
             subtitle="Communities and organizations I contribute to"
         >
             <div className="space-y-6 max-w-3xl mx-auto">

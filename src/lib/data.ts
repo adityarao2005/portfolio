@@ -2,7 +2,7 @@ import { parse } from "yaml";
 import type { ResumeData } from "./types";
 
 const RESUME_YAML_URL =
-    "https://raw.githubusercontent.com/adityarao2005/resume-ci-automation/refs/heads/main/data/resume.yaml";
+    "https://raw.githubusercontent.com/adityarao2005/resume-ci-automation/refs/heads/cv/data/resume.yaml";
 
 export async function fetchResumeData(): Promise<ResumeData> {
     const res = await fetch(RESUME_YAML_URL);
